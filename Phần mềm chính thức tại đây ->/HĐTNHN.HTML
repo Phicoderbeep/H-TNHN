@@ -4595,77 +4595,7 @@
       updateAiHelpOverlayState();
     }
 
-    // Sample library data
-    const librarySeedFiles = [
-      '../Hình ảnh/z6211023211263_fa357f58a83e797b6909bb0589cafd63.jpg',
-      '../Hình ảnh/z6211023221895_00edbfd6b371a86f7d4736c4893b505d.jpg',
-      '../Hình ảnh/z6211023225666_72787ae07d0750387678d965e67778e4.jpg',
-      '../Hình ảnh/z6304398531497_d981c7c4ddae3dea31edb0172fdf675f.jpg',
-      '../Hình ảnh/z6304398542958_8c924a61869a939b7439b847b5b54fc7.jpg',
-      '../Hình ảnh/z6304398848370_8f0a93434592aa11f2e191e80e9ffbb5.jpg',
-      '../Hình ảnh/z6304398853077_a44516a54de3ec01fb89e0232f617590.jpg',
-      '../Hình ảnh/z6307917613907_4b8b9ab0187dc2afcaa3e2c4ccdda860.jpg',
-      '../Hình ảnh/z6307917617214_6821dd9505d85df3ee9212c7ddb72cc7.jpg',
-      '../Hình ảnh/z6307917617216_97c4531e9c131387683048cc458442ee.jpg',
-      '../Hình ảnh/z6307917627705_6c609c669d98e402e2eba20ec612b583.jpg',
-      '../Hình ảnh/z6307917667460_9da748426f8fb8199504f7dbf0c99a1a.jpg',
-      '../Hình ảnh/z7684743980400_3b10b90e95fb9a51f4f580c7e6973ee7.jpg',
-      '../Hình ảnh/z7684744124470_60f194ccf52088b5289da79a2db1a7dc.jpg',
-      '../Hình ảnh/z7684744464408_d0208b60bb73ea76481190617177a733.jpg',
-      '../Hình ảnh/z7684744633682_964e962253fdb2e0afd338671dbba3a6.jpg',
-      '../Hình ảnh/z7684747951753_c6b37dc53b4e7df6d5da234b10656f4f.jpg',
-      '../Hình ảnh/z7684748832369_7514c43fb5caa9a4e9a2c56e40d77d7e.jpg',
-      '../Hình ảnh/z7684749760175_2209fed424e75e005b6d1c3ab4f3b650.jpg',
-      '../Hình ảnh/z7684750816419_3d808b9f582c815272751ed23308c6db.jpg',
-      '../Hình ảnh/z7684752157033_640d05945c7fce737c73b1329c65873c.jpg',
-      '../Hình ảnh/z7684753466638_1dc57cc1dd80dcc24f83bf1755fb73b4.jpg',
-      '../Hình ảnh/z7684754704639_93a1c51c2322a880a78e709f434769f7.jpg',
-      '../Hình ảnh/z7684755740359_b7a5476df614c0d5e4b8bc0c025df598.jpg',
-      '../Hình ảnh/z7684757777228_6b63f010c96b5b97196f29669ef220aa.jpg'
-    ];
-
-    const librarySeedMeta = [
-      { title: 'Thực hành khâu vá và tái sử dụng vật dụng', desc: 'Học sinh thực hiện hoạt động khéo tay trong lớp học, rèn luyện tính cẩn thận và ý thức tiết kiệm.' },
-      { title: 'Nhóm học sinh thiết kế sản phẩm trải nghiệm', desc: 'Các em cùng phối hợp hoàn thiện sản phẩm học tập theo nhóm trong giờ hoạt động trải nghiệm.' },
-      { title: 'Trưng bày sản phẩm sau tiết thực hành', desc: 'Khoảnh khắc tổng kết khi học sinh giới thiệu kết quả hoạt động và chia sẻ kinh nghiệm thực hiện.' },
-      { title: 'Chăm sóc cây xanh trong khuôn viên trường', desc: 'Hoạt động lao động gắn với giáo dục trách nhiệm và bảo vệ môi trường học đường.' },
-      { title: 'Quan sát và ghi chép hoạt động thực tế', desc: 'Học sinh tham gia ghi nhận nội dung trải nghiệm để làm tư liệu báo cáo sau tiết học.' },
-      { title: 'Làm việc nhóm dưới không gian xanh', desc: 'Tiết học trải nghiệm ngoài trời giúp học sinh hợp tác và chia sẻ nhiệm vụ hiệu quả hơn.' },
-      { title: 'Chuẩn bị nguyên liệu cho hoạt động thực hành', desc: 'Các em sắp xếp vật liệu, phân công công việc và bắt đầu triển khai nhiệm vụ nhóm.' },
-      { title: 'Giờ trải nghiệm với chủ đề kỹ năng sống', desc: 'Hình ảnh học sinh tham gia hoạt động thực hành, vừa học vừa vận dụng vào tình huống thực tế.' },
-      { title: 'Thảo luận nhóm trong sân trường', desc: 'Không gian mở hỗ trợ học sinh trao đổi ý tưởng và phát triển kỹ năng giao tiếp, hợp tác.' },
-      { title: 'Tiết học ngoài trời theo định hướng trải nghiệm', desc: 'Học sinh thực hiện hoạt động học tập gắn với quan sát, thao tác và chia sẻ trực tiếp.' },
-      { title: 'Hoạt động nhóm với nguyên liệu tự nhiên', desc: 'Các em cùng tham gia chuẩn bị và xử lý nguyên liệu trong một hoạt động thực hành tập thể.' },
-      { title: 'Phối hợp nhiệm vụ trong giờ lao động trải nghiệm', desc: 'Mỗi học sinh đảm nhận một phần việc, góp phần hoàn thành mục tiêu chung của nhóm.' },
-      { title: 'Thiết kế sản phẩm học tập sáng tạo', desc: 'Tiết học chú trọng phát huy sự sáng tạo, tính thẩm mỹ và khả năng tự tay thực hiện sản phẩm.' },
-      { title: 'Trình bày ý tưởng trước lớp', desc: 'Học sinh tự tin giới thiệu phần việc của nhóm và trao đổi kết quả với bạn bè, giáo viên.' },
-      { title: 'Báo cáo sản phẩm theo chủ đề văn hóa', desc: 'Các em trình bày sản phẩm học tập liên quan đến giá trị văn hóa và địa phương.' },
-      { title: 'Poster học tập về di sản và địa danh', desc: 'Sản phẩm minh họa thể hiện sự tìm hiểu của học sinh về văn hóa, lịch sử và cảnh đẹp quê hương.' },
-      { title: 'Trưng bày bài vẽ trong tiết học dự án', desc: 'Hình ảnh các nhóm hoàn thiện và giới thiệu sản phẩm sáng tạo sau thời gian chuẩn bị.' },
-      { title: 'Không khí làm việc tích cực trong lớp', desc: 'Học sinh tập trung hoàn thành nhiệm vụ, thể hiện tinh thần tự giác và hợp tác.' },
-      { title: 'Sản phẩm mỹ thuật gắn với nội dung trải nghiệm', desc: 'Bài học kết hợp quan sát, tìm hiểu và thể hiện cảm nhận qua sản phẩm trực quan.' },
-      { title: 'Giới thiệu danh lam thắng cảnh quê hương', desc: 'Nhóm học sinh thuyết trình về một địa danh tiêu biểu, rèn luyện kỹ năng nói trước tập thể.' },
-      { title: 'Hoạt động báo cáo nhóm theo chủ đề địa phương', desc: 'Các em cùng chuẩn bị nội dung và chia sẻ hiểu biết về văn hóa, thiên nhiên nơi mình sinh sống.' },
-      { title: 'Tiết học thuyết trình với màn hình hỗ trợ', desc: 'Học sinh sử dụng hình ảnh trực quan để làm rõ nội dung bài nói và tăng tính thuyết phục.' },
-      { title: 'Khoảnh khắc lưu niệm sau phần trình bày', desc: 'Hình ảnh cả nhóm chụp cùng nhau sau khi hoàn thành nhiệm vụ thuyết trình trước lớp.' },
-      { title: 'Đại diện nhóm báo cáo kết quả tìm hiểu', desc: 'Học sinh tự tin đứng trước lớp, trình bày sản phẩm và trả lời câu hỏi từ bạn bè.' },
-      { title: 'Poster về Hội An trong hoạt động học tập', desc: 'Sản phẩm học sinh giới thiệu di sản văn hóa qua tranh vẽ, chữ viết và ý tưởng trình bày sáng tạo.' }
-    ];
-
-    const sampleLibraryItems = librarySeedFiles.map((imagePath, idx) => ({
-      id: ++itemIdCounter,
-      title: librarySeedMeta[idx]?.title || `Hình ảnh hoạt động ${String(idx + 1).padStart(2, '0')}`,
-      desc: librarySeedMeta[idx]?.desc || 'Tư liệu hình ảnh học tập và hoạt động trải nghiệm được cập nhật từ thư mục hình ảnh của dự án.',
-      type: 'image',
-      imagePath,
-      author: 'Trần Anh Phi',
-      authorEmail: 'trananhphi@gmail.com',
-      role: 'STUDENT',
-      date: '2026-04-01',
-      color: ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#6366f1'][idx % 6],
-      likes: 0,
-      comments: []
-    }));
+    
 
     function getUserKey(email) {
       return (email || '').trim().toLowerCase();
